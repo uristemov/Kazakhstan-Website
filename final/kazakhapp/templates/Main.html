@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'css/main.css'%}">
+    <title>Main</title>
+
+    <style>
+
+
+    </style>
+</head>
+<body>
+    
+       
+    <div class="header">
+        <div style="display: flex;gap: 3px;">
+            <a style="padding-bottom: 1%;" href="{%url 'main' %}"><button class="btn btn-info" style="margin-top: 3vh;margin-left: 2vw;">Main Page</button></a>
+          
+        </div>
+
+   
+    <div class="navs">
+        <a href="{%url 'explore' %}">Explore</a>
+        <a href="">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+   
+
+    </div>
+    
+
+    <div style="background-image: url(https://static.independent.co.uk/2021/12/09/09/iStock-1333589684.jpg?quality=75&width=1200&auto=webp);
+    background-repeat: no-repeat;height: 100vh;width: 100%;background-size: cover;display:flex;align-items: center;justify-content: center;text-align: center;">
+        <h1 style="font-size: 45px; color: rgb(255, 255, 255); margin-top: 0%;">
+            Kazakhstan is a country with the best beauty.
+        </h1>
+    </div>
+
+    <hr style="margin: 0%;">
+
+<div id="about" style="background-color: rgb(245, 245, 245);">
+    <h1 style=" margin-left: 2%;  font-size: 2,5vw; color: black;">About</h1>
+    <div class="about_container" style="margin-left: 3%;">
+        <div class="about_class" >
+           
+            <a style="font-size: 30px; color: black;text-decoration: none;" href="{%url 'med' %}">Medicine</a>
+            <img class="about_img"src="https://strategy2050.kz/upload/iblock/dba/b7e8f2624dd310b56a80d2a70aa2c449.jpg" alt="">
+        </div>
+
+        <div class="about_class">
+            <a style="font-size: 30px; color: black;text-decoration: none;" href="{%url 'trad' %}">Tradition</a>
+            
+            <img class="about_img"src="https://1.bp.blogspot.com/-ATqQh1VKIww/WlnYET2mlKI/AAAAAAAANkg/o4yTWd91044Nn-DCkloYtNkY8ISjfi_KACLcBGAs/s1600/maxresdefault.jpg" alt="">
+        </div>
+
+        <div class="about_class">
+            
+            <a style="font-size: 30px; color: black;text-decoration: none;" href="{%url 'sport' %}">Sport</a>
+            <img class="about_img"src="https://astanatimes.com/wp-content/uploads/2015/12/IMG_3433.jpg" alt="">
+        </div>
+
+        <div class="about_class">
+            <a style="font-size: 30px; color: black;text-decoration: none;" href="{%url 'art' %}">Art</a>
+            <img class="about_img"src="https://voicesoncentralasia.org/wp-content/uploads/2018/10/10.jpg" alt="">
+        </div>
+    </div>
+    
+</div>
+<hr>
+<h1 style="margin-left: 50px;">Feedbacks</h1>
+  <a href = "{%url 'upload'%}" style="margin-left: 60px;" ><button  type="submit" class="btn btn-primary">Add comment</button></a>
+  
+
+<hr>
+
+{% for comment in comment %}
+<div style="display: flex;">
+    <br>
+        
+    
+    
+        <div style="display: flex;justify-content: space-around;width: 700px;">
+            <div>
+                <p>{{comment.title}}</p>
+                <div style="display: flex;gap: 20px;">            
+                    <p>{{comment.content}}</p>
+                    <p>{{comment.launch_year}}</p>
+                </div>
+    
+            </div>
+        </div>
+        <div style="display: flex; gap: 20px;height: 50px;">
+            <a href="update/{{comment.id}}" class="btn btn-warning" id = '{{comment.id}}'>edit</a>
+            <a href="delete/{{comment.id}}" class="btn btn-danger" id = '{{comment.id}}'>delete</a>
+        </div>
+            <hr>
+       
+    
+    
+    </div>
+    {%endfor%}
+
+<hr>
+
+
+
+
+  <div class="footer">
+      <br>
+    <p> <strong>© 2021 All Rights Reserved</strong></p>
+  </div>
+
+</body>
+</html>

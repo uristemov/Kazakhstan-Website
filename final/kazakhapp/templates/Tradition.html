@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!-- css static -->
+    <link rel="stylesheet" href="{%static 'css/trad.css'%}">
+   
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Tradition</title>
+    <!-- <style>
+
+
+
+
+
+
+
+
+
+
+    </style> -->
+  </head>
+  <body>
+    <div class="header">
+ 
+      <a style="padding-bottom: 1%;" href="{%url 'main' %}"><button class="btn btn-info" style="margin-top: 3vh;margin-left: 2vw;">Main Page</button></a>
+  
+   
+    <div class="navs">
+        <a href="#">Contact</a>
+        <a href="">People</a>
+        <a href="">About</a>
+    </div>
+   
+
+    </div>
+
+    <div class="box">
+      <div class="box-item">
+        <!-- <img src="/img/tradi1.jpg" /> -->
+        <img src="{%static 'images/tradi1.jpg'%}" />
+        <div class="text">
+          <h3>Гостеприимство</h3>
+          <p>
+            Казахи очень гостеприимный народ, прием гостей является особо важным
+            для них мероприятием.
+          </p>
+        </div>
+      </div>
+
+      <div class="box-item">
+        <!-- <img src="/img/trad22.jpg" /> -->
+        <img src="{%static 'images/trad22.jpg'%}" />
+        <div class="text">
+          <h3>Брак</h3>
+          <p>
+            Особе внимание обращалось к браку, каждый брак пролхлдил через 33
+            этапов проверки и мероприятий.
+          </p>
+        </div>
+      </div>
+
+      <div class="box-item">
+        <!-- <img src="/img/trad3.jpg" /> -->
+        <img src="{%static 'images/trad3.jpg'%}" />
+        <div class="text">
+          <h3>Семейные отношения</h3>
+          <p>
+            Ребенка с детсва учат правилам общения между членами семьи, которое
+            состоит из 18 основных правил.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+        <br>
+      <p> <strong>© 2021 All Rights Reserved</strong></p>
+    </div>
+  </body>
+</html>

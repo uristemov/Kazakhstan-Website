@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+          <title>Log In</title>
+</head>
+<style>
+          body{
+                background-color: rgb(169, 178, 186);    
+          }
+</style>
+<body>
+          <div class="header" style=" margin-top: 0%; display: flex; background-color: whitesmoke; margin-bottom: 5%;">
+            <img class="logo" src="https://www.election.gov.kz/theme/cik/images/symbolls/gerb-in.png" height="80" width="100" style="margin-left: 2%;" onclick="document.location='project-1.html'" alt="">
+                  <h1 style="margin-left: 3%; color: rgb(226, 177, 86);display: flex; align-items: center;" >Authorization center</h1>  
+                
+
+                </div>
+
+          <div id="sign1" style="height: 500px; width: 800px; margin:0% auto; background-color: antiquewhite; ">
+            <h1 style="margin-left: 5%; color: black; " >Sign Up</h1> 
+            <form action="{% url 'sign' %}" method="post" enctype="multipart/form-data" style="margin-left: auto; align-items: center; margin-left: 17%;">
+              {% csrf_token %}  
+              {{ form.as_p }}
+              <button type="submit" class="btn btn-primary"  style="margin-right: 2%;">Register</button>       
+
+          </form>
+          <small style="float: right;margin-top: 2%; margin-right:20%;" id="emailHelp" class="form-text text-muted" onclick="document.location='login.html'">Already have an account?</small>
+
+          </div>
+
+
+
+          <!-- <form  id="sign1" style="height: 500px; width: 800px; margin:0% auto; background-color: antiquewhite; ">
+                    <h1 style="margin-left: 5%; color: black; " >Sign Up</h1> 
+                    <div style="margin-left: auto; align-items: center; margin-left: 17%;"> -->
+
+                              <!-- <div class="form-group">
+                                        <label >First Name</label>
+                                        <input type="text" class="form-control"  placeholder="Enter First name" style="width: 500px;">
+                                      </div>
+                                      <div>
+                                      <label >Last Name</label>
+                                      <input type="text" class="form-control"   placeholder="Enter Last name" style="width: 500px;">
+                                    </div>
+                    
+                                    <div>
+                                        <label >IIN</label>
+                                        <input type="text" class="form-control"   placeholder="Enter your IIN" style="width: 500px;">
+                                      </div>
+                                      
+                                      <div>
+                                        <label >Birthday</label>
+                                        <input type="date" class="form-control"  max="2005-01-01" style="width: 500px;">
+                                      </div>
+                              
+                    </div> -->
+<!-- 
+                    <small style="float: right;margin-top: 2%; margin-right:20%;" id="emailHelp" class="form-text text-muted" onclick="document.location='login.html'">Already have an account?</small>
+                  
+                  
+          </form> -->
+          
+            <!-- <div style="margin: 1% auto; display: flex; justify-content: space-between; width: 800px;"> -->
+            <!-- <button id="nextt" class="btn btn-primary" onclick="checkAll()" style="margin-left: 2%;">Next</button> -->
+              
+            <!-- <button  class="btn btn-primary" style="margin-right: 2%;">Main Page</button>       
+             </div> -->
+<!-- 
+                    <script>
+                              function checkAll(){
+                                        var text = "";
+                                var all =  document.forms["sign1"];   
+                                for(var i = 0;i<all.length;i++){
+                                          
+                                          if(all.elements[i].type!="submit"){
+                                                    if(all.elements[i].value.length==0){
+                                                              alert("Fill all information!");
+                                                              return;
+                                                    }
+                                          }
+                                }
+                              
+
+                                window.location.href = "{% url 'loading' %}";
+                                
+                              }
+                    </script> -->
+</body>
+
+</html>

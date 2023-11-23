@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <div id="contact" class="container mt-3" style="background-color: rgba(107, 145, 237, 0.74);">
+                    <h2>Feedback</h2>
+                    <p>Dear users! Here you can write inquiries
+                        on technical issues, reviews and
+                        recommend improvements to the portal</p>
+                    <form  method = 'POST' enctype="multipart/form-data"> 
+                        {%csrf_token%}
+                        
+                    <table class = 'w-50 table table-light' style="border-radius:10px;background-color:#FFFF99;">
+
+                              {% for i in comment%}
+                              <tr>
+
+                                        <th>{{i.label}}</th>
+                                        <td>{{i}}</td>
+                              </tr>
+                              {%endfor%}
+                    </table>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+                      
+                    </form>
+                  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+
+          <div class="table-food" id="table">
+                    <table class="table caption-top table-hover table-striped table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">№</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Short Biography</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                              {% for i in arts %}
+                      <tr>
+
+                              
+                              <td>{{i.art_id}}</td>
+                              <td>{{i.name}}</td>
+                              <td>{{i.biography}}</td>
+                             
+                      </tr>
+                      {% endfor %}
+                      <!-- <tr>
+                        <th scope="row">1</th>
+                        <td>Abilkhan Kasteev</td>
+                        <td>Kazakhstani painter. He was highly decorated, winning the National Artist of Kazakh SSR </td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Agimsaly Duzelkhanov</td>
+                        <td>Kazakhstani artist. Born in Kazalinsk in Kyzyl-Orda oblast, he graduated from Almaty Art College and Moscow State Institute.</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Aisha Garifkyzy Galimbaeva</td>
+                        <td>Kazakhstani painter and educator. She is noted for her colourful and realistic depictions of women's changing position in the Soviet Bloc in the mid-20th century.</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Zhenis Kakenuly Nurlybayev</td>
+                        <td> Kazakh painter, art critic and author of the сulture support Year emblem in Kazakhstan, laureate of The presidential grant of The Republic of Kazakhstan.</td>
+                        
+                      </tr> -->
+                    </tbody>
+                  </table>
+                  </div>
+        
+</body>
+</html>

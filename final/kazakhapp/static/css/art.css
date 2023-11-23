@@ -1,0 +1,105 @@
+.content {
+          height: 100vh;
+          background-image: url(https://oyla.xyz/uploads/oylaarticle/mavzolej-assaui-rus4-5b90586e6d.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;   
+      }
+      .table-food {
+          padding: 0 15% ;
+      }
+      .content h1, p{
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          margin-left: 10%;
+          font-size: 4vw;
+          color: rgb(251, 248, 239);
+      }
+      .content p {
+          font-size: 2vw;
+          align-items: center;
+          justify-content: center;
+      
+          
+      }
+      
+      @media screen and (min-width: 601px) {
+          .content p {
+            font-size: 20px;
+          }
+        }
+        
+        @media screen and (max-width: 600px) {
+          .content p {
+            font-size: 15px;
+          }
+        }
+      .content-food {
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          padding: 0 15%;
+          font-size: 4vw;
+          color: rgb(251, 248, 239);
+      }
+      
+      @media (max-width: 850px) {
+          #gallery {
+              
+              flex-direction: column;
+              
+              width: 100%;
+              
+      
+          }
+          .col-3{
+              width: 100%;
+          }
+      
+      
+      }
+      .col-3 h1{
+          text-align: center;
+      }
+      
+      #gallery div h1 {
+          font-size: 100%;
+          color: rgb(212, 198, 214);
+      }
+      #gallery div img {
+          width: 250px;
+          height: 150px;
+      
+      }
+      .paintings {
+          padding: 0 15%;
+          color: hsla(344, 96%, 98%, 0.91);
+          font-size: 130%;
+      }
+      
+      body {
+          background: url(https://kazakhstan.travel/static/images/bg-shape-3.svg) #67a1d6;
+      }
+      .header{
+          position: sticky;
+          top: 0;
+          display: flex;
+          background-color: rgb(170, 209, 231);
+          overflow: hidden;
+          justify-content: space-between;
+          
+      
+      }
+      .navs a{
+          color: hsl(0, 46%, 100%);
+          text-decoration: none;
+          margin-left: 3.5vw;
+      }
+      .navs{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+          margin-right: 4%;
+          padding-left:  12px;
+      }
